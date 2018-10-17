@@ -2,10 +2,9 @@
 
 namespace AppBundle\Controller;
 
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\Routing\Annotation\Route;
 
 class DefaultController extends Controller
 {
@@ -15,22 +14,15 @@ class DefaultController extends Controller
     public function indexAction(Request $request)
     {
         // replace this example code with whatever you need
-        return $this->render('default/index.html.twig', [
-            'base_dir' => realpath($this->getParameter('kernel.project_dir')).DIRECTORY_SEPARATOR,
-        ]);
+        return $this->render('default/index.html.twig');
     }
 
     /**
-     * @Route("/affiche",  name="homepage1")
-     * @param int $id_article
-     *
-     * @return \Symfony\Component\HttpFoundation\Response
+     * @Route("/theme/{id}")
      */
-    public function afficherArticle()
+    public function themeAction()
     {
-
-        return $this->render('default/article.html.twigs');
+        // replace this example code with whatever you need
+        return $this->render('default/theme.html.twig');
     }
-
-
 }
