@@ -1,0 +1,3 @@
+doris_first_homepage:
+    path:     /
+    defaults: { _controller: dorisFirstBundle:Default:index }
